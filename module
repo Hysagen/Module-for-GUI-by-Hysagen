@@ -261,6 +261,7 @@ function UI_Module.CreateMain(hubTitle)
         L.LayoutOrder = self.Count
         L.TextTransparency = 0.2
     end
+
     function TabBase:AddMultiDropdown(text, items, defaultState, callback)
         self.Count = self.Count + 1
         local container = Instance.new("Frame", self.Page)
@@ -354,7 +355,6 @@ function UI_Module.CreateMain(hubTitle)
         end
 
         updateHeader()
-
         local isOpen = false
         local maxHeight = math.min(#items * 30 + 4, 180)
 
@@ -374,6 +374,121 @@ function UI_Module.CreateMain(hubTitle)
             Scroll.CanvasSize = UDim2.new(0, 0, 0, #items * 30)
             task.wait(0.2)
             updatePageCanvas()
+        end)
+    end
+    function TabBase:AddDropdown(text, items, defaultOption, callback)
+        self.Count = self.Count + 1
+        local container = Instance.new("Frame", self.Page)
+        container.Name = "Row"
+        container.Size = UDim2.new(1, -10, 0, 44)
+        container.BackgroundTransparency = 1
+        container.LayoutOrder = self.Count
+
+        local MainBtn = Instance.new("TextButton", container)
+        MainBtn.Size = UDim2.new(1, 0, 0, 40)
+        MainBtn.BackgroundColor3 = CurrentTheme.Secondary
+        MainBtn.Text = "  " .. text .. ": " .. (defaultOption or "None")
+        MainBtn.TextColor3 = CurrentTheme.Text
+        MainBtn.Font = Enum.Font.GothamBold
+        MainBtn.TextSize = 14
+        MainBtn.TextXAlignment = Enum.TextXAlignment.Left
+        MainBtn.AutoButtonColor = false
+        local mainCorner = Instance.new("UICorner", MainBtn)
+        mainCorner.CornerRadius = UDim.new(0, 8)
+        local mainStroke = Instance.new("UIStroke", MainBtn)
+        mainStroke.Thickness = 1
+        mainStroke.Color = CurrentTheme.Stroke
+
+        local Arrow = Instance.new("TextLabel", MainBtn)
+        Arrow.Size = UDim2.new(0, 30, 1, 0)
+        Arrow.Position = UDim2.new(1, -30, 0, 0)
+        Arrow.Text = "▼"
+        Arrow.BackgroundTransparency = 1
+        Arrow.TextColor3 = Color3.fromRGB(180, 180, 195)
+        Arrow.Font = Enum.Font.GothamBold
+
+        local ListFrame = Instance.new("Frame", container)
+        ListFrame.Size = UDim2.new(1, 0, 0, 0)
+        ListFrame.Position = UDim2.new(0, 0, 0, 44)
+        ListFrame.BackgroundColor3 = CurrentTheme.Main
+        ListFrame.ClipsDescendants = true
+        ListFrame.BorderSizePixel = 0
+        local listFrameCorner = Instance.new("UICorner", ListFrame)
+        listFrameCorner.CornerRadius = UDim.new(0, 8)
+
+        local Scroll = Instance.new("ScrollingFrame", ListFrame)
+        Scroll.Size = UDim2.new(1, -4, 1, -4)
+        Scroll.Position = UDim2.new(0, 2, 0, 2)
+        Scroll.BackgroundTransparency = 1
+        Scroll.BorderSizePixel = 0
+        Scroll.ScrollBarThickness = 3
+        Scroll.ScrollBarImageColor3 = CurrentTheme.Accent
+
+        local ListLayout = Instance.new("UIListLayout", Scroll)
+        ListLayout.Padding = UDim.new(0, 2)
+        ListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+        local selected = defaultOption
+        local buttons = {}
+
+        local function updateHeader()
+            MainBtn.Text = "  " .. text .. ": " .. (selected or "None")
+        end
+
+        for _, itemName in ipairs(items) do
+            local ItemBtn = Instance.new("TextButton", Scroll)
+            ItemBtn.Size = UDim2.new(1, 0, 0, 28)
+            ItemBtn.BackgroundColor3 = (selected == itemName) and CurrentTheme.Accent or CurrentTheme.Secondary
+            ItemBtn.Text = "   " .. itemName
+            ItemBtn.TextColor3 = (selected == itemName) and CurrentTheme.BtnText or CurrentTheme.Text
+            ItemBtn.Font = Enum.Font.Gotham
+            ItemBtn.TextSize = 13
+            ItemBtn.TextXAlignment = Enum.TextXAlignment.Left
+            ItemBtn.AutoButtonColor = false
+            local corner = Instance.new("UICorner", ItemBtn)
+            corner.CornerRadius = UDim.new(0, 4)
+
+            buttons[itemName] = ItemBtn
+
+            ItemBtn.MouseButton1Click:Connect(function()
+                selected = itemName
+                for opt, btn in pairs(buttons) do
+                    btn.BackgroundColor3 = CurrentTheme.Secondary
+                    btn.TextColor3 = CurrentTheme.Text
+                end
+                ItemBtn.BackgroundColor3 = CurrentTheme.Accent
+                ItemBtn.TextColor3 = CurrentTheme.BtnText
+                updateHeader()
+                if callback then callback(selected) end
+                local t = TweenService:Create(ListFrame, TweenInfo.new(0.2), {Size = UDim2.new(1, 0, 0, 0)})
+                TweenService:Create(container, TweenInfo.new(0.2), {Size = UDim2.new(1, -10, 0, 44)}):Play()
+                t:Play()
+                Arrow.Text = "▼"
+                isOpen = false
+                task.wait(0.2)
+                if self.Page then
+                    local list = self.Page:FindFirstChildOfClass("UIListLayout")
+                    if list then self.Page.CanvasSize = UDim2.new(0, 0, 0, list.AbsoluteContentSize.Y + 20) end
+                end
+            end)
+        end
+
+        updateHeader()
+        local isOpen = false
+        local maxHeight = math.min(#items * 30 + 4, 180)
+
+        MainBtn.MouseButton1Click:Connect(function()
+            isOpen = not isOpen
+            Arrow.Text = isOpen and "▲" or "▼"
+            local targetHeight = isOpen and maxHeight or 0
+            TweenService:Create(ListFrame, TweenInfo.new(0.2), {Size = UDim2.new(1, 0, 0, targetHeight)}):Play()
+            TweenService:Create(container, TweenInfo.new(0.2), {Size = UDim2.new(1, -10, 0, 44 + targetHeight)}):Play()
+            Scroll.CanvasSize = UDim2.new(0, 0, 0, #items * 30)
+            task.wait(0.2)
+            if self.Page then
+                local list = self.Page:FindFirstChildOfClass("UIListLayout")
+                if list then self.Page.CanvasSize = UDim2.new(0, 0, 0, list.AbsoluteContentSize.Y + 20) end
+            end
         end)
     end
 
