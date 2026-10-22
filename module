@@ -237,7 +237,22 @@ function UI_Module.CreateMain(hubTitle)
             elseif obj.Name == "ActionBtn" or obj.Name == "SliderFill" or obj.Name == "SliderKnob" then
                 TweenService:Create(obj, tInfo, {BackgroundColor3 = theme.Accent}):Play()
                 if obj:IsA("TextButton") then TweenService:Create(obj, tInfo, {TextColor3 = theme.BtnText}):Play() end
-            elseif obj:IsA("TextLabel") and obj.Parent.Name ~= "SliderKnob" and obj.Name ~= "MinimizeBtn" and obj.Name ~= "CloseBtn" then
+            elseif obj.Name == "DropdownMain" then
+                TweenService:Create(obj, tInfo, {BackgroundColor3 = theme.Secondary, TextColor3 = theme.Text}):Play()
+            elseif obj.Name == "DropdownList" then
+                TweenService:Create(obj, tInfo, {BackgroundColor3 = theme.Main}):Play()
+            elseif obj.Name == "DropdownArrow" then
+                TweenService:Create(obj, tInfo, {TextColor3 = theme.Text}):Play()
+            elseif obj.Name == "DropdownItem" then
+                if obj:GetAttribute("Selected") then
+                    TweenService:Create(obj, tInfo, {BackgroundColor3 = theme.Accent, TextColor3 = theme.BtnText}):Play()
+                else
+                    TweenService:Create(obj, tInfo, {BackgroundColor3 = theme.Secondary, TextColor3 = theme.Text}):Play()
+                end
+            elseif obj:IsA("ScrollingFrame") and obj.Parent.Name == "DropdownList" then
+                TweenService:Create(obj, tInfo, {ScrollBarImageColor3 = theme.Accent}):Play()
+
+            elseif obj:IsA("TextLabel") and obj.Parent.Name ~= "SliderKnob" and obj.Name ~= "MinimizeBtn" and obj.Name ~= "CloseBtn" and obj.Name ~= "DropdownArrow" then
                 TweenService:Create(obj, tInfo, {TextColor3 = theme.Text}):Play()
             end
         end
@@ -271,6 +286,7 @@ function UI_Module.CreateMain(hubTitle)
         container.LayoutOrder = self.Count
 
         local MainBtn = Instance.new("TextButton", container)
+        MainBtn.Name = "DropdownMain"
         MainBtn.Size = UDim2.new(1, 0, 0, 40)
         MainBtn.BackgroundColor3 = CurrentTheme.Secondary
         MainBtn.Text = "  " .. text .. " (0)"
@@ -286,6 +302,7 @@ function UI_Module.CreateMain(hubTitle)
         mainStroke.Color = CurrentTheme.Stroke
 
         local Arrow = Instance.new("TextLabel", MainBtn)
+        Arrow.Name = "DropdownArrow"
         Arrow.Size = UDim2.new(0, 30, 1, 0)
         Arrow.Position = UDim2.new(1, -30, 0, 0)
         Arrow.Text = "▼"
@@ -294,6 +311,7 @@ function UI_Module.CreateMain(hubTitle)
         Arrow.Font = Enum.Font.GothamBold
 
         local ListFrame = Instance.new("Frame", container)
+        ListFrame.Name = "DropdownList"
         ListFrame.Size = UDim2.new(1, 0, 0, 0)
         ListFrame.Position = UDim2.new(0, 0, 0, 44)
         ListFrame.BackgroundColor3 = CurrentTheme.Main
@@ -327,6 +345,7 @@ function UI_Module.CreateMain(hubTitle)
             if state then selectedCount = selectedCount + 1 end
 
             local ItemBtn = Instance.new("TextButton", Scroll)
+            ItemBtn.Name = "DropdownItem"
             ItemBtn.Size = UDim2.new(1, 0, 0, 28)
             ItemBtn.BackgroundColor3 = state and CurrentTheme.Accent or CurrentTheme.Secondary
             ItemBtn.Text = "   " .. itemName
@@ -335,11 +354,13 @@ function UI_Module.CreateMain(hubTitle)
             ItemBtn.TextSize = 13
             ItemBtn.TextXAlignment = Enum.TextXAlignment.Left
             ItemBtn.AutoButtonColor = false
+            ItemBtn:SetAttribute("Selected", state)
             local corner = Instance.new("UICorner", ItemBtn)
             corner.CornerRadius = UDim.new(0, 4)
 
             ItemBtn.MouseButton1Click:Connect(function()
                 states[itemName] = not states[itemName]
+                ItemBtn:SetAttribute("Selected", states[itemName])
                 if states[itemName] then
                     selectedCount = selectedCount + 1
                     ItemBtn.BackgroundColor3 = CurrentTheme.Accent
@@ -385,6 +406,7 @@ function UI_Module.CreateMain(hubTitle)
         container.LayoutOrder = self.Count
 
         local MainBtn = Instance.new("TextButton", container)
+        MainBtn.Name = "DropdownMain"
         MainBtn.Size = UDim2.new(1, 0, 0, 40)
         MainBtn.BackgroundColor3 = CurrentTheme.Secondary
         MainBtn.Text = "  " .. text .. ": " .. (defaultOption or "None")
@@ -400,6 +422,7 @@ function UI_Module.CreateMain(hubTitle)
         mainStroke.Color = CurrentTheme.Stroke
 
         local Arrow = Instance.new("TextLabel", MainBtn)
+        Arrow.Name = "DropdownArrow"
         Arrow.Size = UDim2.new(0, 30, 1, 0)
         Arrow.Position = UDim2.new(1, -30, 0, 0)
         Arrow.Text = "▼"
@@ -408,6 +431,7 @@ function UI_Module.CreateMain(hubTitle)
         Arrow.Font = Enum.Font.GothamBold
 
         local ListFrame = Instance.new("Frame", container)
+        ListFrame.Name = "DropdownList"
         ListFrame.Size = UDim2.new(1, 0, 0, 0)
         ListFrame.Position = UDim2.new(0, 0, 0, 44)
         ListFrame.BackgroundColor3 = CurrentTheme.Main
@@ -437,6 +461,7 @@ function UI_Module.CreateMain(hubTitle)
 
         for _, itemName in ipairs(items) do
             local ItemBtn = Instance.new("TextButton", Scroll)
+            ItemBtn.Name = "DropdownItem"
             ItemBtn.Size = UDim2.new(1, 0, 0, 28)
             ItemBtn.BackgroundColor3 = (selected == itemName) and CurrentTheme.Accent or CurrentTheme.Secondary
             ItemBtn.Text = "   " .. itemName
@@ -445,6 +470,7 @@ function UI_Module.CreateMain(hubTitle)
             ItemBtn.TextSize = 13
             ItemBtn.TextXAlignment = Enum.TextXAlignment.Left
             ItemBtn.AutoButtonColor = false
+            ItemBtn:SetAttribute("Selected", (selected == itemName))
             local corner = Instance.new("UICorner", ItemBtn)
             corner.CornerRadius = UDim.new(0, 4)
 
@@ -453,6 +479,7 @@ function UI_Module.CreateMain(hubTitle)
             ItemBtn.MouseButton1Click:Connect(function()
                 selected = itemName
                 for opt, btn in pairs(buttons) do
+                    btn:SetAttribute("Selected", opt == itemName)
                     btn.BackgroundColor3 = CurrentTheme.Secondary
                     btn.TextColor3 = CurrentTheme.Text
                 end
