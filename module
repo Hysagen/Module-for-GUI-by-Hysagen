@@ -49,18 +49,8 @@ function UI_Module.CreateMain(hubTitle)
         ["Midnight"] = { Main = Color3.fromRGB(14, 14, 20), Sidebar = Color3.fromRGB(22, 22, 32), Stroke = Color3.fromRGB(50, 50, 70), Accent = Color3.fromRGB(0, 180, 255), Text = Color3.fromRGB(230, 240, 255), Secondary = Color3.fromRGB(30, 32, 45), BtnText = Color3.fromRGB(0, 10, 25), Glow = Color3.fromRGB(0, 130, 220) },
         ["Ocean Abyss"] = { Main = Color3.fromRGB(10, 18, 30), Sidebar = Color3.fromRGB(16, 28, 46), Stroke = Color3.fromRGB(30, 70, 110), Accent = Color3.fromRGB(0, 210, 255), Text = Color3.fromRGB(190, 230, 255), Secondary = Color3.fromRGB(22, 40, 60), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(0, 170, 240) },
         ["Blood Moon"] = { Main = Color3.fromRGB(20, 8, 10), Sidebar = Color3.fromRGB(35, 12, 15), Stroke = Color3.fromRGB(110, 30, 30), Accent = Color3.fromRGB(255, 60, 60), Text = Color3.fromRGB(255, 200, 200), Secondary = Color3.fromRGB(50, 20, 22), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(200, 30, 30) },
-        ["Emerald Isle"] = { Main = Color3.fromRGB(8, 20, 14), Sidebar = Color3.fromRGB(14, 32, 20), Stroke = Color3.fromRGB(30, 100, 60), Accent = Color3.fromRGB(60, 255, 160), Text = Color3.fromRGB(200, 255, 220), Secondary = Color3.fromRGB(20, 44, 30), BtnText = Color3.fromRGB(0, 50, 20), Glow = Color3.fromRGB(40, 200, 100) },
         ["Cyber Neon"] = { Main = Color3.fromRGB(18, 0, 28), Sidebar = Color3.fromRGB(30, 6, 50), Stroke = Color3.fromRGB(130, 0, 190), Accent = Color3.fromRGB(255, 0, 255), Text = Color3.fromRGB(240, 200, 255), Secondary = Color3.fromRGB(48, 14, 72), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(200, 0, 255) },
-        ["Solar Flare"] = { Main = Color3.fromRGB(28, 18, 8), Sidebar = Color3.fromRGB(45, 30, 14), Stroke = Color3.fromRGB(140, 80, 20), Accent = Color3.fromRGB(255, 180, 0), Text = Color3.fromRGB(255, 240, 200), Secondary = Color3.fromRGB(60, 42, 24), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(220, 140, 0) },
-        ["Rose Quartz"] = { Main = Color3.fromRGB(35, 22, 30), Sidebar = Color3.fromRGB(55, 32, 50), Stroke = Color3.fromRGB(140, 80, 110), Accent = Color3.fromRGB(255, 160, 210), Text = Color3.fromRGB(255, 225, 240), Secondary = Color3.fromRGB(70, 44, 62), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(220, 100, 180) },
-        ["Amethyst"] = { Main = Color3.fromRGB(16, 8, 32), Sidebar = Color3.fromRGB(28, 14, 52), Stroke = Color3.fromRGB(80, 40, 160), Accent = Color3.fromRGB(180, 100, 255), Text = Color3.fromRGB(230, 210, 255), Secondary = Color3.fromRGB(40, 24, 70), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(140, 60, 220) },
-        ["Slate Gray"] = { Main = Color3.fromRGB(28, 28, 32), Sidebar = Color3.fromRGB(42, 42, 48), Stroke = Color3.fromRGB(80, 80, 95), Accent = Color3.fromRGB(160, 170, 190), Text = Color3.fromRGB(220, 220, 230), Secondary = Color3.fromRGB(52, 52, 60), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(120, 130, 160) },
-        ["Gold Deluxe"] = { Main = Color3.fromRGB(18, 16, 10), Sidebar = Color3.fromRGB(32, 28, 16), Stroke = Color3.fromRGB(130, 100, 30), Accent = Color3.fromRGB(255, 215, 0), Text = Color3.fromRGB(255, 245, 200), Secondary = Color3.fromRGB(46, 42, 24), BtnText = Color3.fromRGB(40, 30, 0), Glow = Color3.fromRGB(220, 180, 0) },
-        ["Lavender"] = { Main = Color3.fromRGB(25, 20, 35), Sidebar = Color3.fromRGB(40, 30, 55), Stroke = Color3.fromRGB(100, 70, 140), Accent = Color3.fromRGB(200, 150, 255), Text = Color3.fromRGB(235, 220, 255), Secondary = Color3.fromRGB(50, 40, 70), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(160, 100, 220) },
-        ["Crimson"] = { Main = Color3.fromRGB(30, 8, 8), Sidebar = Color3.fromRGB(50, 12, 12), Stroke = Color3.fromRGB(140, 30, 30), Accent = Color3.fromRGB(255, 80, 80), Text = Color3.fromRGB(255, 210, 210), Secondary = Color3.fromRGB(65, 20, 20), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(220, 40, 40) },
-        ["Forest"] = { Main = Color3.fromRGB(10, 25, 12), Sidebar = Color3.fromRGB(16, 38, 18), Stroke = Color3.fromRGB(40, 110, 50), Accent = Color3.fromRGB(80, 255, 120), Text = Color3.fromRGB(200, 255, 210), Secondary = Color3.fromRGB(22, 50, 26), BtnText = Color3.fromRGB(0, 40, 10), Glow = Color3.fromRGB(50, 200, 80) },
-        ["Sunset"] = { Main = Color3.fromRGB(40, 20, 10), Sidebar = Color3.fromRGB(60, 30, 16), Stroke = Color3.fromRGB(180, 80, 30), Accent = Color3.fromRGB(255, 160, 40), Text = Color3.fromRGB(255, 230, 200), Secondary = Color3.fromRGB(75, 40, 22), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(220, 120, 20) },
-        ["Arctic"] = { Main = Color3.fromRGB(20, 30, 45), Sidebar = Color3.fromRGB(30, 45, 65), Stroke = Color3.fromRGB(80, 120, 180), Accent = Color3.fromRGB(100, 220, 255), Text = Color3.fromRGB(210, 240, 255), Secondary = Color3.fromRGB(40, 60, 80), BtnText = Color3.fromRGB(255, 255, 255), Glow = Color3.fromRGB(60, 180, 240) }
+        ["Gold Deluxe"] = { Main = Color3.fromRGB(18, 16, 10), Sidebar = Color3.fromRGB(32, 28, 16), Stroke = Color3.fromRGB(130, 100, 30), Accent = Color3.fromRGB(255, 215, 0), Text = Color3.fromRGB(255, 245, 200), Secondary = Color3.fromRGB(46, 42, 24), BtnText = Color3.fromRGB(40, 30, 0), Glow = Color3.fromRGB(220, 180, 0) }
     }
 
     local CurrentTheme = Themes["Midnight"]
@@ -156,12 +146,8 @@ function UI_Module.CreateMain(hubTitle)
         btn.BorderSizePixel = 0
         local btnCorner = Instance.new("UICorner", btn)
         btnCorner.CornerRadius = UDim.new(0, 6)
-        local enter = btn.MouseEnter:Connect(function()
-            TweenService:Create(btn, TweenInfo.new(0.15), {BackgroundColor3 = color:Lerp(Color3.new(1,1,1), 0.2)}):Play()
-        end)
-        local leave = btn.MouseLeave:Connect(function()
-            TweenService:Create(btn, TweenInfo.new(0.15), {BackgroundColor3 = color}):Play()
-        end)
+        local enter = btn.MouseEnter:Connect(function() TweenService:Create(btn, TweenInfo.new(0.15), {BackgroundColor3 = color:Lerp(Color3.new(1,1,1), 0.2)}):Play() end)
+        local leave = btn.MouseLeave:Connect(function() TweenService:Create(btn, TweenInfo.new(0.15), {BackgroundColor3 = color}):Play() end)
         table.insert(Library.Connections, enter)
         table.insert(Library.Connections, leave)
         local click = btn.MouseButton1Click:Connect(clickFunc)
@@ -275,296 +261,125 @@ function UI_Module.CreateMain(hubTitle)
         L.LayoutOrder = self.Count
         L.TextTransparency = 0.2
     end
-    function TabBase:AddItemSelector(text, items, defaultState, callback)
+    function TabBase:AddMultiDropdown(text, items, defaultState, callback)
         self.Count = self.Count + 1
-        local Row = Instance.new("Frame", self.Page)
-        Row.Name = "Row"
-        Row.Size = UDim2.new(1, -10, 0, 250)
-        Row.BackgroundColor3 = CurrentTheme.Secondary
-        Row.LayoutOrder = self.Count
-        local rowCorner = Instance.new("UICorner", Row)
-        rowCorner.CornerRadius = UDim.new(0, 10)
-        local rowStroke = Instance.new("UIStroke", Row)
-        rowStroke.Thickness = 1
-        rowStroke.Color = CurrentTheme.Stroke
-        rowStroke.Transparency = 0.4
+        local container = Instance.new("Frame", self.Page)
+        container.Name = "Row"
+        container.Size = UDim2.new(1, -10, 0, 44)
+        container.BackgroundTransparency = 1
+        container.LayoutOrder = self.Count
 
-        local T = Instance.new("TextLabel", Row)
-        T.Size = UDim2.new(1, -24, 0, 30)
-        T.Position = UDim2.new(0, 12, 0, 0)
-        T.Text = text
-        T.TextColor3 = CurrentTheme.Text
-        T.Font = Enum.Font.GothamBold
-        T.TextSize = 15
-        T.BackgroundTransparency = 1
-        T.TextXAlignment = Enum.TextXAlignment.Left
+        local MainBtn = Instance.new("TextButton", container)
+        MainBtn.Size = UDim2.new(1, 0, 0, 40)
+        MainBtn.BackgroundColor3 = CurrentTheme.Secondary
+        MainBtn.Text = "  " .. text .. " (0)"
+        MainBtn.TextColor3 = CurrentTheme.Text
+        MainBtn.Font = Enum.Font.GothamBold
+        MainBtn.TextSize = 14
+        MainBtn.TextXAlignment = Enum.TextXAlignment.Left
+        MainBtn.AutoButtonColor = false
+        local mainCorner = Instance.new("UICorner", MainBtn)
+        mainCorner.CornerRadius = UDim.new(0, 8)
+        local mainStroke = Instance.new("UIStroke", MainBtn)
+        mainStroke.Thickness = 1
+        mainStroke.Color = CurrentTheme.Stroke
 
-        local Scroll = Instance.new("ScrollingFrame", Row)
-        Scroll.Size = UDim2.new(1, -24, 1, -40)
-        Scroll.Position = UDim2.new(0, 12, 0, 32)
+        local Arrow = Instance.new("TextLabel", MainBtn)
+        Arrow.Size = UDim2.new(0, 30, 1, 0)
+        Arrow.Position = UDim2.new(1, -30, 0, 0)
+        Arrow.Text = "▼"
+        Arrow.BackgroundTransparency = 1
+        Arrow.TextColor3 = CurrentTheme.TextDim
+        Arrow.Font = Enum.Font.GothamBold
+
+        local ListFrame = Instance.new("Frame", container)
+        ListFrame.Size = UDim2.new(1, 0, 0, 0)
+        ListFrame.Position = UDim2.new(0, 0, 0, 44)
+        ListFrame.BackgroundColor3 = CurrentTheme.Main
+        ListFrame.ClipsDescendants = true
+        ListFrame.BorderSizePixel = 0
+        local listFrameCorner = Instance.new("UICorner", ListFrame)
+        listFrameCorner.CornerRadius = UDim.new(0, 8)
+
+        local Scroll = Instance.new("ScrollingFrame", ListFrame)
+        Scroll.Size = UDim2.new(1, -4, 1, -4)
+        Scroll.Position = UDim2.new(0, 2, 0, 2)
         Scroll.BackgroundTransparency = 1
         Scroll.BorderSizePixel = 0
-        Scroll.ScrollBarThickness = 4
+        Scroll.ScrollBarThickness = 3
         Scroll.ScrollBarImageColor3 = CurrentTheme.Accent
 
-        local List = Instance.new("UIListLayout", Scroll)
-        List.Padding = UDim.new(0, 4)
-        List.SortOrder = Enum.SortOrder.LayoutOrder
+        local ListLayout = Instance.new("UIListLayout", Scroll)
+        ListLayout.Padding = UDim.new(0, 2)
+        ListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
-        local function updateCanvas()
-            Scroll.CanvasSize = UDim2.new(0, 0, 0, List.AbsoluteContentSize.Y + 10)
+        local selectedCount = 0
+        local states = {}
+
+        local function updateHeader()
+            MainBtn.Text = "  " .. text .. " (" .. selectedCount .. ")"
         end
-        List:GetPropertyChangedSignal("AbsoluteContentSize"):Connect(updateCanvas)
 
         for _, itemName in ipairs(items) do
-            local ItemFrame = Instance.new("Frame", Scroll)
-            ItemFrame.Size = UDim2.new(1, -8, 0, 32)
-            ItemFrame.BackgroundColor3 = CurrentTheme.Main
-            ItemFrame.LayoutOrder = 1
-            local itemCorner = Instance.new("UICorner", ItemFrame)
-            itemCorner.CornerRadius = UDim.new(0, 6)
+            local state = defaultState
+            states[itemName] = state
+            if state then selectedCount = selectedCount + 1 end
 
-            local L = Instance.new("TextLabel", ItemFrame)
-            L.Size = UDim2.new(1, -60, 1, 0)
-            L.Position = UDim2.new(0, 8, 0, 0)
-            L.Text = itemName
-            L.TextColor3 = CurrentTheme.Text
-            L.Font = Enum.Font.Gotham
-            L.TextSize = 13
-            L.BackgroundTransparency = 1
-            L.TextXAlignment = Enum.TextXAlignment.Left
+            local ItemBtn = Instance.new("TextButton", Scroll)
+            ItemBtn.Size = UDim2.new(1, 0, 0, 28)
+            ItemBtn.BackgroundColor3 = state and CurrentTheme.Accent or CurrentTheme.Secondary
+            ItemBtn.Text = "   " .. itemName
+            ItemBtn.TextColor3 = state and CurrentTheme.BtnText or CurrentTheme.Text
+            ItemBtn.Font = Enum.Font.Gotham
+            ItemBtn.TextSize = 13
+            ItemBtn.TextXAlignment = Enum.TextXAlignment.Left
+            ItemBtn.AutoButtonColor = false
+            local corner = Instance.new("UICorner", ItemBtn)
+            corner.CornerRadius = UDim.new(0, 4)
 
-            local Toggled = defaultState
-            local Btn = Instance.new("TextButton", ItemFrame)
-            Btn.Size = UDim2.new(0, 44, 0, 24)
-            Btn.Position = UDim2.new(1, -52, 0.5, -12)
-            Btn.BackgroundColor3 = Toggled and Color3.fromRGB(50,200,50) or Color3.fromRGB(70,70,80)
-            Btn.Text = ""
-            Btn.AutoButtonColor = false
-            local btnCorner = Instance.new("UICorner", Btn)
-            btnCorner.CornerRadius = UDim.new(1,0)
-
-            local Dot = Instance.new("Frame", Btn)
-            Dot.Size = UDim2.new(0, 18, 0, 18)
-            Dot.Position = Toggled and UDim2.new(1, -20, 0.5, -9) or UDim2.new(0, 2, 0.5, -9)
-            Dot.BackgroundColor3 = Color3.fromRGB(255,255,255)
-            Dot.BorderSizePixel = 0
-            local dotCorner = Instance.new("UICorner", Dot)
-            dotCorner.CornerRadius = UDim.new(1,0)
-
-            local click = Btn.MouseButton1Click:Connect(function()
-                Toggled = not Toggled
-                local targetColor = Toggled and Color3.fromRGB(50,200,50) or Color3.fromRGB(70,70,80)
-                local dotPos = Toggled and UDim2.new(1, -20, 0.5, -9) or UDim2.new(0, 2, 0.5, -9)
-                TweenService:Create(Btn, TweenInfo.new(0.2, Enum.EasingStyle.Quart), {BackgroundColor3 = targetColor}):Play()
-                TweenService:Create(Dot, TweenInfo.new(0.2, Enum.EasingStyle.Quart), {Position = dotPos}):Play()
-                if callback then callback(itemName, Toggled) end
-            end)
-            table.insert(Library.Connections, click)
-        end
-        updateCanvas()
-    end
-
-    function TabBase:AddToggleWithBind(text, defaultState, defaultKey, callback)
-        self.Count = self.Count + 1
-        local Toggled = defaultState or false
-        local Binding = false
-        local BindEnabled = true
-        local CurrentKey = defaultKey or Enum.KeyCode.E
-        local Connections = {}
-
-        local Row = Instance.new("Frame", self.Page)
-        Row.Name = "Row"
-        Row.Size = UDim2.new(1, -10, 0, 56)
-        Row.BackgroundColor3 = CurrentTheme.Secondary
-        Row.LayoutOrder = self.Count
-        local rowCorner = Instance.new("UICorner", Row)
-        rowCorner.CornerRadius = UDim.new(0, 10)
-        local rowStroke = Instance.new("UIStroke", Row)
-        rowStroke.Thickness = 1
-        rowStroke.Color = CurrentTheme.Stroke
-        rowStroke.Transparency = 0.4
-
-        local L = Instance.new("TextLabel", Row)
-        L.Size = UDim2.new(0.35, 0, 1, 0)
-        L.Position = UDim2.new(0, 12, 0, 0)
-        L.Text = text
-        L.TextColor3 = CurrentTheme.Text
-        L.Font = Enum.Font.GothamMedium
-        L.TextSize = 15
-        L.BackgroundTransparency = 1
-        L.TextXAlignment = Enum.TextXAlignment.Left
-
-        local ToggleBtn = Instance.new("TextButton", Row)
-        ToggleBtn.Name = "ToggleBtn"
-        ToggleBtn.Size = UDim2.new(0, 48, 0, 28)
-        ToggleBtn.Position = UDim2.new(0.38, 0, 0.5, -14)
-        ToggleBtn.BackgroundColor3 = Toggled and Color3.fromRGB(50,200,50) or Color3.fromRGB(70,70,80)
-        ToggleBtn.Text = ""
-        ToggleBtn.AutoButtonColor = false
-        local toggleCorner = Instance.new("UICorner", ToggleBtn)
-        toggleCorner.CornerRadius = UDim.new(1,0)
-        local toggleStroke = Instance.new("UIStroke", ToggleBtn)
-        toggleStroke.Color = Color3.fromRGB(255,255,255)
-        toggleStroke.Transparency = 0.6
-        toggleStroke.Thickness = 1
-
-        local Dot = Instance.new("Frame", ToggleBtn)
-        Dot.Name = "Dot"
-        Dot.Size = UDim2.new(0, 22, 0, 22)
-        Dot.Position = Toggled and UDim2.new(1, -24, 0.5, -11) or UDim2.new(0, 2, 0.5, -11)
-        Dot.BackgroundColor3 = Color3.fromRGB(255,255,255)
-        Dot.BorderSizePixel = 0
-        local dotCorner = Instance.new("UICorner", Dot)
-        dotCorner.CornerRadius = UDim.new(1,0)
-
-        local ToggleBindBtn = Instance.new("TextButton", Row)
-        ToggleBindBtn.Name = "ToggleBindBtn"
-        ToggleBindBtn.Size = UDim2.new(0, 40, 0, 26)
-        ToggleBindBtn.Position = UDim2.new(0.58, 0, 0.5, -13)
-        ToggleBindBtn.BackgroundColor3 = BindEnabled and Color3.fromRGB(50,200,50) or Color3.fromRGB(200,50,50)
-        ToggleBindBtn.Text = BindEnabled and "ON" or "OFF"
-        ToggleBindBtn.TextColor3 = CurrentTheme.BtnText
-        ToggleBindBtn.Font = Enum.Font.GothamBold
-        ToggleBindBtn.TextSize = 12
-        ToggleBindBtn.AutoButtonColor = false
-        local bindCorner = Instance.new("UICorner", ToggleBindBtn)
-        bindCorner.CornerRadius = UDim.new(0, 6)
-
-        local BindBtn = Instance.new("TextButton", Row)
-        BindBtn.Name = "ActionBtn"
-        BindBtn.Size = UDim2.new(0, 48, 0, 26)
-        BindBtn.Position = UDim2.new(0.76, 0, 0.5, -13)
-        BindBtn.BackgroundColor3 = CurrentTheme.Accent
-        BindBtn.Text = CurrentKey.Name
-        BindBtn.TextColor3 = CurrentTheme.BtnText
-        BindBtn.Font = Enum.Font.GothamBold
-        BindBtn.TextSize = 13
-        local btnCorner = Instance.new("UICorner", BindBtn)
-        btnCorner.CornerRadius = UDim.new(0, 6)
-
-        local function SetToggle(state)
-            Toggled = state
-            local targetColor = Toggled and Color3.fromRGB(50,200,50) or Color3.fromRGB(70,70,80)
-            local dotPos = Toggled and UDim2.new(1, -24, 0.5, -11) or UDim2.new(0, 2, 0.5, -11)
-            TweenService:Create(ToggleBtn, TweenInfo.new(0.25, Enum.EasingStyle.Quart), {BackgroundColor3 = targetColor}):Play()
-            TweenService:Create(Dot, TweenInfo.new(0.25, Enum.EasingStyle.Quart), {Position = dotPos}):Play()
-            if callback then callback(Toggled) end
-        end
-
-        local function SetBindEnabled(state)
-            BindEnabled = state
-            ToggleBindBtn.BackgroundColor3 = BindEnabled and Color3.fromRGB(50,200,50) or Color3.fromRGB(200,50,50)
-            ToggleBindBtn.Text = BindEnabled and "ON" or "OFF"
-        end
-
-        local toggleClick = ToggleBtn.MouseButton1Click:Connect(function() SetToggle(not Toggled) end)
-        table.insert(Connections, toggleClick)
-        table.insert(Library.Connections, toggleClick)
-
-        local toggleBindClick = ToggleBindBtn.MouseButton1Click:Connect(function() SetBindEnabled(not BindEnabled) end)
-        table.insert(Connections, toggleBindClick)
-        table.insert(Library.Connections, toggleBindClick)
-
-        local bindClick = BindBtn.MouseButton1Click:Connect(function()
-            Binding = true
-            BindBtn.Text = "..."
-            BindBtn.BackgroundColor3 = Color3.fromRGB(255,100,100)
-            local conn
-            conn = UserInputService.InputBegan:Connect(function(input)
-                if input.UserInputType == Enum.UserInputType.Keyboard then
-                    Binding = false
-                    CurrentKey = input.KeyCode
-                    BindBtn.Text = CurrentKey.Name
-                    BindBtn.BackgroundColor3 = CurrentTheme.Accent
-                    if conn then conn:Disconnect() end
+            ItemBtn.MouseButton1Click:Connect(function()
+                states[itemName] = not states[itemName]
+                if states[itemName] then
+                    selectedCount = selectedCount + 1
+                    ItemBtn.BackgroundColor3 = CurrentTheme.Accent
+                    ItemBtn.TextColor3 = CurrentTheme.BtnText
+                else
+                    selectedCount = selectedCount - 1
+                    ItemBtn.BackgroundColor3 = CurrentTheme.Secondary
+                    ItemBtn.TextColor3 = CurrentTheme.Text
                 end
+                updateHeader()
+                if callback then callback(itemName, states[itemName]) end
             end)
-            table.insert(Connections, conn)
-            table.insert(Library.Connections, conn)
-            task.wait(5)
-            if Binding then
-                Binding = false
-                BindBtn.Text = CurrentKey.Name
-                BindBtn.BackgroundColor3 = CurrentTheme.Accent
-                if conn then conn:Disconnect() end
+        end
+
+        updateHeader()
+
+        local isOpen = false
+        local maxHeight = math.min(#items * 30 + 4, 180)
+
+        local function updatePageCanvas()
+            if self.Page then
+                local list = self.Page:FindFirstChildOfClass("UIListLayout")
+                if list then self.Page.CanvasSize = UDim2.new(0, 0, 0, list.AbsoluteContentSize.Y + 20) end
             end
+        end
+
+        MainBtn.MouseButton1Click:Connect(function()
+            isOpen = not isOpen
+            Arrow.Text = isOpen and "▲" or "▼"
+            local targetHeight = isOpen and maxHeight or 0
+            TweenService:Create(ListFrame, TweenInfo.new(0.2), {Size = UDim2.new(1, 0, 0, targetHeight)}):Play()
+            TweenService:Create(container, TweenInfo.new(0.2), {Size = UDim2.new(1, -10, 0, 44 + targetHeight)}):Play()
+            Scroll.CanvasSize = UDim2.new(0, 0, 0, #items * 30)
+            task.wait(0.2)
+            updatePageCanvas()
         end)
-        table.insert(Connections, bindClick)
-        table.insert(Library.Connections, bindClick)
-
-        local bindGlobal = UserInputService.InputBegan:Connect(function(input)
-            if input.UserInputType ~= Enum.UserInputType.Keyboard then return end
-            if Binding then return end
-            if not BindEnabled then return end
-            if UserInputService:GetFocusedTextBox() then return end
-            if input.KeyCode == CurrentKey then SetToggle(not Toggled) end
-        end)
-        table.insert(Connections, bindGlobal)
-        table.insert(Library.Connections, bindGlobal)
-
-        local ancestryConn = Row.AncestryChanged:Connect(function()
-            if not Row.Parent then
-                for _, c in ipairs(Connections) do if c and c.Disconnect then c:Disconnect() end end
-            end
-        end)
-        table.insert(Connections, ancestryConn)
-        table.insert(Library.Connections, ancestryConn)
-    end
-
-    function TabBase:AddButtonRow(text, btnText, callback)
-        self.Count = self.Count + 1
-        local Row = Instance.new("Frame", self.Page)
-        Row.Name = "Row"
-        Row.Size = UDim2.new(1, -10, 0, 56)
-        Row.BackgroundColor3 = CurrentTheme.Secondary
-        Row.LayoutOrder = self.Count
-        local rowCorner = Instance.new("UICorner", Row)
-        rowCorner.CornerRadius = UDim.new(0, 10)
-        local rowStroke = Instance.new("UIStroke", Row)
-        rowStroke.Thickness = 1
-        rowStroke.Color = CurrentTheme.Stroke
-        rowStroke.Transparency = 0.4
-
-        local L = Instance.new("TextLabel", Row)
-        L.Size = UDim2.new(0.6, 0, 1, 0)
-        L.Position = UDim2.new(0, 12, 0, 0)
-        L.Text = text
-        L.TextColor3 = CurrentTheme.Text
-        L.Font = Enum.Font.GothamMedium
-        L.TextSize = 15
-        L.BackgroundTransparency = 1
-        L.TextXAlignment = Enum.TextXAlignment.Left
-
-        local B = Instance.new("TextButton", Row)
-        B.Name = "ActionBtn"
-        B.Size = UDim2.new(0.3, 0, 0, 32)
-        B.Position = UDim2.new(0.65, 0, 0.5, -16)
-        B.BackgroundColor3 = CurrentTheme.Accent
-        B.Text = btnText
-        B.TextColor3 = CurrentTheme.BtnText
-        B.Font = Enum.Font.GothamBold
-        B.TextSize = 15
-        local btnCorner = Instance.new("UICorner", B)
-        btnCorner.CornerRadius = UDim.new(0, 6)
-
-        local enter = B.MouseEnter:Connect(function() TweenService:Create(B, TweenInfo.new(0.15), {BackgroundColor3 = CurrentTheme.Accent:Lerp(Color3.new(1,1,1), 0.15)}):Play() end)
-        table.insert(Library.Connections, enter)
-        local leave = B.MouseLeave:Connect(function() TweenService:Create(B, TweenInfo.new(0.15), {BackgroundColor3 = CurrentTheme.Accent}):Play() end)
-        table.insert(Library.Connections, leave)
-        local click = B.MouseButton1Click:Connect(function()
-            if callback then callback() end
-            TweenService:Create(B, TweenInfo.new(0.1), {Size = UDim2.new(0.28, 0, 0, 30)}):Play()
-            task.wait(0.1)
-            TweenService:Create(B, TweenInfo.new(0.1), {Size = UDim2.new(0.3, 0, 0, 32)}):Play()
-        end)
-        table.insert(Library.Connections, click)
     end
 
     function TabBase:AddToggleButton(text, default, callback)
         self.Count = self.Count + 1
         local Toggled = default or false
-
         local Row = Instance.new("Frame", self.Page)
         Row.Name = "Row"
         Row.Size = UDim2.new(1, -10, 0, 56)
@@ -617,6 +432,55 @@ function UI_Module.CreateMain(hubTitle)
             TweenService:Create(ToggleBtn, TweenInfo.new(0.25, Enum.EasingStyle.Quart), {BackgroundColor3 = targetColor}):Play()
             TweenService:Create(Dot, TweenInfo.new(0.25, Enum.EasingStyle.Quart), {Position = dotPos}):Play()
             if callback then callback(Toggled) end
+        end)
+        table.insert(Library.Connections, click)
+    end
+
+    function TabBase:AddButtonRow(text, btnText, callback)
+        self.Count = self.Count + 1
+        local Row = Instance.new("Frame", self.Page)
+        Row.Name = "Row"
+        Row.Size = UDim2.new(1, -10, 0, 56)
+        Row.BackgroundColor3 = CurrentTheme.Secondary
+        Row.LayoutOrder = self.Count
+        local rowCorner = Instance.new("UICorner", Row)
+        rowCorner.CornerRadius = UDim.new(0, 10)
+        local rowStroke = Instance.new("UIStroke", Row)
+        rowStroke.Thickness = 1
+        rowStroke.Color = CurrentTheme.Stroke
+        rowStroke.Transparency = 0.4
+
+        local L = Instance.new("TextLabel", Row)
+        L.Size = UDim2.new(0.6, 0, 1, 0)
+        L.Position = UDim2.new(0, 12, 0, 0)
+        L.Text = text
+        L.TextColor3 = CurrentTheme.Text
+        L.Font = Enum.Font.GothamMedium
+        L.TextSize = 15
+        L.BackgroundTransparency = 1
+        L.TextXAlignment = Enum.TextXAlignment.Left
+
+        local B = Instance.new("TextButton", Row)
+        B.Name = "ActionBtn"
+        B.Size = UDim2.new(0.3, 0, 0, 32)
+        B.Position = UDim2.new(0.65, 0, 0.5, -16)
+        B.BackgroundColor3 = CurrentTheme.Accent
+        B.Text = btnText
+        B.TextColor3 = CurrentTheme.BtnText
+        B.Font = Enum.Font.GothamBold
+        B.TextSize = 15
+        local btnCorner = Instance.new("UICorner", B)
+        btnCorner.CornerRadius = UDim.new(0, 6)
+
+        local enter = B.MouseEnter:Connect(function() TweenService:Create(B, TweenInfo.new(0.15), {BackgroundColor3 = CurrentTheme.Accent:Lerp(Color3.new(1,1,1), 0.15)}):Play() end)
+        table.insert(Library.Connections, enter)
+        local leave = B.MouseLeave:Connect(function() TweenService:Create(B, TweenInfo.new(0.15), {BackgroundColor3 = CurrentTheme.Accent}):Play() end)
+        table.insert(Library.Connections, leave)
+        local click = B.MouseButton1Click:Connect(function()
+            if callback then callback() end
+            TweenService:Create(B, TweenInfo.new(0.1), {Size = UDim2.new(0.28, 0, 0, 30)}):Play()
+            task.wait(0.1)
+            TweenService:Create(B, TweenInfo.new(0.1), {Size = UDim2.new(0.3, 0, 0, 32)}):Play()
         end)
         table.insert(Library.Connections, click)
     end
