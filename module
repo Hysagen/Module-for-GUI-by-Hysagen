@@ -289,7 +289,7 @@ function UI_Module.CreateMain(hubTitle)
         Arrow.Position = UDim2.new(1, -30, 0, 0)
         Arrow.Text = "▼"
         Arrow.BackgroundTransparency = 1
-        Arrow.TextColor3 = CurrentTheme.TextDim
+        Arrow.TextColor3 = Color3.fromRGB(180, 180, 195)
         Arrow.Font = Enum.Font.GothamBold
 
         local ListFrame = Instance.new("Frame", container)
